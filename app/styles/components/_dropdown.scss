@@ -1,0 +1,22 @@
+$dropdown-width: 240px;
+$dropdown-height: 20px;
+
+.dropdown-wrapper {
+  position: relative;
+  .dropdown {
+    @extend .form-input;
+    margin: 0 10px;
+    width: $dropdown-width;
+    height: $dropdown-height;
+  }
+
+  select {
+    position: absolute;
+    top: 5px;
+    left: 0;
+    width: $dropdown-width;
+    height: $dropdown-height;
+    margin: 0 10px;
+    opacity: 0;
+  }
+}

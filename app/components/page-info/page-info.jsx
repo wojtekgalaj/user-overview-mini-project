@@ -1,7 +1,5 @@
 import React from 'react';
 
-import './page-info.scss';
-
 import Dropdown from '../dropdown/dropdown.jsx';
 import Search from '../search/search.jsx';
 
