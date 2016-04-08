@@ -1,0 +1,15 @@
+.app {
+  display: flex;
+
+  .sideNav {
+    width: 15%;
+    background: #eee;
+    padding: 0 30px;
+  }
+
+  .mainContent {
+    width: 85%;
+    padding: 0 30px;
+  }
+}
+
