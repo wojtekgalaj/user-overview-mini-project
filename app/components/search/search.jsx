@@ -14,6 +14,7 @@ class Search extends React.Component {
           placeholder="Search for user"
           type="text"/>
         <button type="submit">
+          <i className="fa fa-search"></i>
         </button>
       </form>
     )
