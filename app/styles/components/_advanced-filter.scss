@@ -1,0 +1,8 @@
+.advanced-filter {
+  @extend .form-input;
+  font-weight: bold;
+  color: #333;
+  i {
+    margin-right: 10px;
+  }
+}

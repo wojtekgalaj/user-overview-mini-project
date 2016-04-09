@@ -1,10 +1,11 @@
-$dropdown-width: 240px;
+$dropdown-width: 140px;
 $dropdown-height: 20px;
 
 .dropdown-wrapper {
   position: relative;
   .dropdown {
     @extend .form-input;
+    @extend .drop-shadow;
     margin: 0 10px;
     width: $dropdown-width;
     height: $dropdown-height;

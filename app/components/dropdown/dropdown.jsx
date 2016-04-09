@@ -13,20 +13,19 @@ class Dropdown extends React.Component {
 
   renderOptions() {
     return this.state.options.map((item, index) => {
-      console.log(index)
-      return <option value="{item}" key={index}>{item}</option>
+      return <option value={item} key={index}>{item}</option>
     })
   }
 
   selectOption(e) {
-    console.log(e.target.value);
+    this.setState({selected: e.target.value});
   }
 
   render() {
     return (
       <div className="dropdown-wrapper">
         <div className="dropdown">
-          <span>{this.state.selected}</span>
+          <div className="currentValue">{this.state.selected}</div>
         </div>
         <select onChange={this.selectOption.bind(this)}>
           {this.renderOptions()}

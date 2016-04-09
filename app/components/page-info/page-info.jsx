@@ -2,6 +2,7 @@ import React from 'react';
 
 import Dropdown from '../dropdown/dropdown.jsx';
 import Search from '../search/search.jsx';
+import AdvancedFilter from '../advanced-filter/advanced-filter.jsx';
 
 class PageInfo extends React.Component {
   render() {
@@ -11,6 +12,7 @@ class PageInfo extends React.Component {
         <div className="controlls">
           <Dropdown/>
           <Search/>
+          <AdvancedFilter/>
         </div>
       </div>
     )

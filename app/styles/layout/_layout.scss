@@ -1,6 +1,6 @@
 .app {
   display: flex;
-
+  min-height: 800px;
   .sideNav {
     width: 15%;
     background: #eee;
@@ -9,7 +9,6 @@
 
   .mainContent {
     width: 85%;
-    padding: 0 30px;
   }
 }
 
