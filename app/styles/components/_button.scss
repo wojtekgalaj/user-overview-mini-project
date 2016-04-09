@@ -1,0 +1,9 @@
+button {
+  @extend .form-input;
+  height: 30px;
+  background: #1DADF5;
+  color: white;
+  border-color: #228BC2;
+  font-weight: bold;
+  margin-left: 10px;
+}

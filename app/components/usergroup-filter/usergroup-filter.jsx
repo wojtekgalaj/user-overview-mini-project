@@ -1,6 +1,6 @@
 import React from 'react';
 
-class Dropdown extends React.Component {
+class UsergroupFilter extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -35,4 +35,4 @@ class Dropdown extends React.Component {
   }
 }
 
-export default Dropdown;
+export default UsergroupFilter;
