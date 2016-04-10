@@ -49,13 +49,26 @@ class Table extends React.Component {
     this.setState({users})
   }
 
+  toggleAll(ev) {
+    const users = this.state.users;
+    const checked = ev.target.checked;
+
+    users.forEach((user) => {
+      user.selected = checked;
+    })
+
+    this.setState({users});
+  }
+
   renderRows() {
     return this.state.users.map((user, index) => {
       const avatarURI = `app/assets/avatars/${user.name.toLowerCase().replace(/ /g, '_')}.png`;
       return (
         <tr key={index} className={user.selected ? 'selected' : ''}>
           <td><input type="checkbox"
-                     onChange={this.selectRow.bind(this, index)}/>
+              onChange={this.selectRow.bind(this, index)}
+              checked={user.selected}
+            />
           </td>
           <td className="name">
             <img src={avatarURI} alt=""/>
@@ -80,7 +93,8 @@ class Table extends React.Component {
         <table className="table users">
           <thead>
             <tr>
-              <th><input type="checkbox"/></th>
+              <th><input type="checkbox"
+                         onChange={this.toggleAll.bind(this)}/></th>
               <th>Username</th>
               <th>Email</th>
               <th>Replies <img src="app/assets/triangle.png"/></th>
