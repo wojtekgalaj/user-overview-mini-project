@@ -1,0 +1,34 @@
+.paginationWrapper {
+  display: flex;
+  align-items: center;
+  padding: 30px;
+  .results {
+    width: 70%;
+  }
+  .pagination {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+  }
+}
+.pagination-pager {
+  display: flex;
+  align-items: center;
+  color: #111;
+  .pager {
+    @extend .form-input;
+    color: #000;
+    margin: 0 5px;
+  }
+}
+
+.paginators {
+  color: #1DADF5;
+  &.inactive {
+    color: #C5C5C5;
+  }
+
+  span {
+    margin: 0 5px;
+  }
+}

@@ -1,4 +1,5 @@
 import React from 'react';
+import Dropdown from '../dropdown/dropdown.jsx';
 
 class UsergroupFilter extends React.Component {
   constructor() {
@@ -23,14 +24,11 @@ class UsergroupFilter extends React.Component {
 
   render() {
     return (
-      <div className="dropdown-wrapper">
-        <div className="dropdown">
-          <div className="currentValue">{this.state.selected}</div>
-        </div>
-        <select onChange={this.selectOption.bind(this)}>
-          {this.renderOptions()}
-        </select>
-      </div>
+      <Dropdown
+        selected = {this.state.selected}
+        selectOptions = {this.selectOption.bind(this)}
+        renderOptions = {this.renderOptions.bind(this)}
+      />
     )
   }
 }

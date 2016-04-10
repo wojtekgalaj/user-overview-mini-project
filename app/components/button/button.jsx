@@ -1,5 +1,5 @@
 import React from 'react';
 
-const Button = (props) => <button>{props.buttonText}</button>
+const Button = (props) => <button className="button">{props.buttonText}</button>
 
 export default Button;
