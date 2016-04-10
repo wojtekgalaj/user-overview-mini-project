@@ -1,9 +1,11 @@
 .paginationWrapper {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   padding: 30px;
-  .results {
-    width: 70%;
+  .controls {
+    display: flex;
+    justify-content: flex-end;
   }
   .pagination {
     display: flex;
@@ -14,11 +16,16 @@
 .pagination-pager {
   display: flex;
   align-items: center;
+  margin: 0 15px;
   color: #111;
   .pager {
     @extend .form-input;
     color: #000;
     margin: 0 5px;
+    span {
+      position: relative;
+      top: 3px;
+    }
   }
 }
 
@@ -29,6 +36,6 @@
   }
 
   span {
-    margin: 0 5px;
+    margin: 0 2px;
   }
 }

@@ -25,6 +25,7 @@ class UsergroupFilter extends React.Component {
   render() {
     return (
       <Dropdown
+        width={120}
         selected = {this.state.selected}
         selectOptions = {this.selectOption.bind(this)}
         renderOptions = {this.renderOptions.bind(this)}

@@ -35,31 +35,34 @@ class Pagination extends React.Component {
           <label htmlFor="results">Results: </label>
           <span id="results">1337</span>
         </div>
-        <div className="pagination">
-          <div className="paginators inactive">
-            <span className="paginators-first">First</span>
-            <span className="paginators-separator">—</span>
-            <span className="paginators-prev">Previous</span>
+        <div className="controls">
+          <div className="pagination">
+            <div className="paginators inactive">
+              <span className="paginators-first">First</span>
+              <span className="paginators-separator">—</span>
+              <span className="paginators-prev">Previous</span>
+            </div>
+            <div className="pagination-pager">
+              <span>Page</span>
+              <div className="pager"><span>1</span></div>
+              <span>of 99</span>
+            </div>
+            <div className="paginators">
+              <span className="paginators-next">Next</span>
+              <span className="paginators-separator">—</span>
+              <span className="paginators-last">Last</span>
+            </div>
           </div>
-          <div className="pagination-pager">
-            <span>Page</span>
-            <div className="pager">1</div>
-            <span>of 99</span>
-          </div>
-          <div className="paginators">
-            <span className="paginators-next">Next</span>
-            <span className="paginators-separator">—</span>
-            <span className="paginators-last">Last</span>
+          <div className="options">
+            <Dropdown
+              width={80}
+              selected = {this.state.pagination.selected}
+              selectOptions = {this.selectOption.bind(this)}
+              renderOptions = {this.renderOptions.bind(this)}
+            />
           </div>
         </div>
-        <div className="options">
-          <Dropdown
-            selected = {this.state.pagination.selected}
-            selectOptions = {this.selectOption.bind(this)}
-            renderOptions = {this.renderOptions.bind(this)}
-          />
         </div>
-      </div>
     );
   }
 };
