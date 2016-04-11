@@ -1,5 +1,5 @@
 import React from 'react';
-import Dropdown from '../dropdown/dropdown.jsx';
+import Dropdown from '../dropdown/dropdown';
 
 
 class Pagination extends React.Component {
