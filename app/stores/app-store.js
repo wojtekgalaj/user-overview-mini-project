@@ -5,12 +5,11 @@ import {EventEmitter} from 'events';
 const CHANGE_EVENT = 'change';
 
 var _filters = {
-  showing: false,
+  showing: true,
   active: {}
 };
 
 const _toggleFilters = () => {
-  console.log('toggling');
   _filters.showing = !_filters.showing;
 }
 
@@ -37,7 +36,6 @@ const AppStore = Object.assign(EventEmitter.prototype, {
         _toggleFilters();
         break;
     }
-    console.log('emitting change');
 
     AppStore.emitChange();
 
