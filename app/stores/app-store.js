@@ -4,13 +4,55 @@ import {EventEmitter} from 'events';
 
 const CHANGE_EVENT = 'change';
 
-var _filters = {
+const filters = {
   showing: true,
-  active: {}
+  advanced: {
+    first: {
+      possible: [
+        'Replies',
+        'Topics',
+        'Solved',
+        'Usergroup',
+        'Registration date',
+        'Last login'
+      ],
+      selected: 'Replies'
+    },
+    second: {
+      possible: [
+        [
+          'Is greater than',
+          'Is smaller than',
+          'Equals'
+        ],
+        [
+          'Captain',
+          'Colonel',
+          'General',
+          'Lieutenant',
+          'Officer'
+        ],
+        [
+          'Before',
+          'After',
+          'Exact Date'
+        ]
+      ],
+      selected: 'Is greater than'
+    }
+  }
 };
 
-const _toggleFilters = () => {
-  _filters.showing = !_filters.showing;
+const toggleFilters = () => {
+  filters.showing = !filters.showing;
+}
+
+const setFirstDropdown = (value) => {
+  filters.advanced.first.selected = value;
+}
+
+const setSecondDropdown = (value) => {
+  filters.advanced.second.selected = value;
 }
 
 const AppStore = Object.assign(EventEmitter.prototype, {
@@ -27,13 +69,19 @@ const AppStore = Object.assign(EventEmitter.prototype, {
   },
 
   getFilters() {
-    return _filters;
+    return filters;
   },
 
   dispatcherIndex: register(function (action) {
     switch (action.actionType) {
       case AppConstants.TOGGLE_ADVANCED_FILTERS:
-        _toggleFilters();
+        toggleFilters();
+        break;
+      case AppConstants.AF_SET_FIRST_DROPDOWN:
+        setFirstDropdown(action.value);
+        break;
+      case AppConstants.AF_SET_SECOND_DROPDOWN:
+        setSecondDropdown(action.value);
         break;
     }
 
