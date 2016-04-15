@@ -84,6 +84,9 @@ const renderSecondDropdown = (props) => {
 }
 
 const renderInput = (props) => {
+  if (props.advanced.second.selected === 'Select one') {
+    return <span/>
+  }
   switch(chosenGroup) {
     case 1:
       return renderTextInput(props);
@@ -111,7 +114,8 @@ const renderDatepicker = (props) => {
 
 const renderTextInput = (props) => {
   return (
-    <input type="text"
+    <input
+      type="text"
       onChange={handleTextChange.bind(this)}
       value={props.advanced.third.selected}/>
   )
@@ -135,6 +139,15 @@ const handleTextChange = (ev) => {
   AppActions.updateFilters(newFilters);
 }
 
+const renderActionButton = (props) => {
+  return (
+    <Button
+      buttonStyle="red"
+      buttonText={<i className="fa fa-times"></i>}
+    />
+  )
+}
+
 const FiltersPanel = (props) => {
 
   return (
@@ -154,14 +167,22 @@ const FiltersPanel = (props) => {
                 {renderFirstDropdown(props)}
                 {renderSecondDropdown(props)}
                 {renderInput(props)}
+                {renderActionButton(props)}
               </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <Button buttonText="Add row"/>
             </td>
           </tr>
         </tbody>
         <tfoot>
           <tr>
             <td>
-              <Button buttonText="Apply"/>
+              <Button
+                buttonStyle="green"
+                buttonText="Apply"/>
             </td>
           </tr>
         </tfoot>

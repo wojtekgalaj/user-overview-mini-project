@@ -3,7 +3,17 @@
   height: 30px;
   background: #1DADF5;
   color: white;
-  border-color: #228BC2;
+  border-color: rgba(0, 0, 0, .2);
   font-weight: bold;
   margin-left: 10px;
+  box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.10);
+  &.green {
+    background: #8EC728;
+    border-color: rgba(0, 0, 0, .1)
+  }
+  &.red {
+    background: #D9604C;
+    border-color: rgba(0, 0, 0, .2)
+  }
 }
+
