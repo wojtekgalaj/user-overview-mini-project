@@ -1,9 +1,9 @@
 import React from 'react';
 
-import UsergroupFilter from '../usergroup-filter/usergroup-filter.jsx';
-import Search from '../search/search.jsx';
-import AdvancedFilter from '../advanced-filter/advanced-filter.jsx';
-import Button from '../button/button.jsx';
+import UsergroupFilter from '../usergroup-filter/usergroup-filter';
+import Search from '../search/search';
+import AdvancedFilter from '../advanced-filter/advanced-filter';
+import Button from '../button/button';
 
 class PageInfo extends React.Component {
   render() {

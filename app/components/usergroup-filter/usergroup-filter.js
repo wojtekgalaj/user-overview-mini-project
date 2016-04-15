@@ -1,5 +1,5 @@
 import React from 'react';
-import Dropdown from '../dropdown/dropdown.jsx';
+import Dropdown from '../dropdown/dropdown';
 
 class UsergroupFilter extends React.Component {
   constructor() {
@@ -28,7 +28,7 @@ class UsergroupFilter extends React.Component {
         width={120}
         selected = {this.state.selected}
         selectOptions = {this.selectOption.bind(this)}
-        renderOptions = {this.renderOptions.bind(this)}
+        options = {this.state.options}
       />
     )
   }

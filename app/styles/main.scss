@@ -1,10 +1,12 @@
 @import "./vendor/normalize";
+@import "./vendor/datepicker";
 
 @import "./config/variables";
 @import "./typography/typography";
 @import "./layout/layout";
 
 @import "./components/common/form-elements";
+@import "./components/common/shared";
 
 @import "./components/dropdown";
 @import "./components/page-info";
@@ -13,11 +15,4 @@
 @import "./components/button";
 @import "./components/pagination";
 @import "./components/table";
-
-
-
-
-
-
-
-
+@import "./components/datepicker";

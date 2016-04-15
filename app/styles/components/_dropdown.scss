@@ -6,12 +6,17 @@ $dropdown-height: 20px;
   .dropdown {
     @extend .form-input;
     @extend .drop-shadow;
+    @extend .gradient-light;
+    position: relative;
     margin: 0 10px;
     height: $dropdown-height;
+    .current-value {
+      color: #333;
+    }
     img {
       position: absolute;
       top: 10px;
-      right: 20px;
+      right: 15px;
     }
   }
 

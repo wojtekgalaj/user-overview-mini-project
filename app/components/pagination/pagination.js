@@ -1,5 +1,5 @@
 import React from 'react';
-import Dropdown from '../dropdown/dropdown.jsx';
+import Dropdown from '../dropdown/dropdown';
 
 
 class Pagination extends React.Component {
@@ -58,7 +58,7 @@ class Pagination extends React.Component {
               width={80}
               selected = {this.state.pagination.selected}
               selectOptions = {this.selectOption.bind(this)}
-              renderOptions = {this.renderOptions.bind(this)}
+              options = {this.state.pagination.options}
             />
           </div>
         </div>

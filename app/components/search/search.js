@@ -18,7 +18,6 @@ class Search extends React.Component {
 
   onSubmitHandler(ev) {
     ev.preventDefault();
-    console.log('sewnd', this);
   }
 }
 

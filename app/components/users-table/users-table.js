@@ -1,7 +1,7 @@
 import React from 'react';
 
-import Pagination from '../pagination/pagination.jsx';
-import Table from '../table/table.jsx';
+import Pagination from '../pagination/pagination';
+import Table from '../table/table';
 
 class UsersTable extends React.Component {
   render() {

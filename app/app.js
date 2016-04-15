@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import UserOverview from './user-overview.jsx';
+import UserOverview from './user-overview';
+
+import AppActions from './actions/app-actions';
 
 import './styles/main.scss';
 
