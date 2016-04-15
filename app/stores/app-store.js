@@ -51,7 +51,6 @@ const toggleFilters = () => {
 }
 
 const updateFilters = (newFilters) => {
-  console.log('updating filters with ', newFilters);
   filters.advanced[newFilters.setKey].selected = newFilters.selected;
 }
 

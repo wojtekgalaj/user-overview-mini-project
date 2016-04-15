@@ -103,7 +103,7 @@ const renderInput = (props) => {
 const renderDatepicker = (props) => {
   const shouldShow = getFilters().advanced.second.selected !== 'Select one';
   const current = props.advanced.third.selected;
-  const initWith = current && _.isObject(current) || moment()
+  const initWith = current && _.isObject(current) ? current : moment();
   return (
     <DatePicker
       selected={initWith}
@@ -157,7 +157,11 @@ const FiltersPanel = (props) => {
       <table className="table filters">
         <thead>
           <tr>
-            <td>Advanced filters</td>
+            <td>
+              <div className="inner">
+                Advanced filters <img className="header-triangle" src="app/assets/triangle.png"/>
+              </div>
+            </td>
           </tr>
         </thead>
         <tbody>
@@ -169,10 +173,6 @@ const FiltersPanel = (props) => {
                 {renderInput(props)}
                 {renderActionButton(props)}
               </div>
-            </td>
-          </tr>
-          <tr>
-            <td>
               <Button buttonText="Add row"/>
             </td>
           </tr>
@@ -183,6 +183,12 @@ const FiltersPanel = (props) => {
               <Button
                 buttonStyle="green"
                 buttonText="Apply"/>
+              <Button
+                buttonStyle="white"
+                buttonText="Clear filters"/>
+              <Button
+                buttonStyle="warning"
+                buttonText="close"/>
             </td>
           </tr>
         </tfoot>

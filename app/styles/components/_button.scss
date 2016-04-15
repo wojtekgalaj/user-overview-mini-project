@@ -15,5 +15,16 @@
     background: #D9604C;
     border-color: rgba(0, 0, 0, .2)
   }
+  &.white {
+    color: #333;
+    background: white;
+  }
+  &.warning {
+    color: #D9604C;
+    background: none;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+  }
 }
 
