@@ -6,5 +6,11 @@ export default {
     dispatch({
       actionType: AppConstants.TOGGLE_ADVANCED_FILTERS
     })
+  },
+  updateFilters(newFilters) {
+    dispatch({
+      actionType: AppConstants.UPDATE_FILTERS,
+      data: {newFilters}
+    })
   }
 }

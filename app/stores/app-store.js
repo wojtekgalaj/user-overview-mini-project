@@ -16,7 +16,7 @@ const filters = {
         'Registration date',
         'Last login'
       ],
-      selected: 'Replies'
+      selected: 'Select one'
     },
     second: {
       possible: [
@@ -38,7 +38,10 @@ const filters = {
           'Exact Date'
         ]
       ],
-      selected: 'Is greater than'
+      selected: 'Select one'
+    },
+    third: {
+      selected: ''
     }
   }
 };
@@ -47,12 +50,9 @@ const toggleFilters = () => {
   filters.showing = !filters.showing;
 }
 
-const setFirstDropdown = (value) => {
-  filters.advanced.first.selected = value;
-}
-
-const setSecondDropdown = (value) => {
-  filters.advanced.second.selected = value;
+const updateFilters = (newFilters) => {
+  console.log('updating filters with ', newFilters);
+  filters.advanced[newFilters.setKey].selected = newFilters.selected;
 }
 
 const AppStore = Object.assign(EventEmitter.prototype, {
@@ -77,11 +77,8 @@ const AppStore = Object.assign(EventEmitter.prototype, {
       case AppConstants.TOGGLE_ADVANCED_FILTERS:
         toggleFilters();
         break;
-      case AppConstants.AF_SET_FIRST_DROPDOWN:
-        setFirstDropdown(action.value);
-        break;
-      case AppConstants.AF_SET_SECOND_DROPDOWN:
-        setSecondDropdown(action.value);
+      case AppConstants.UPDATE_FILTERS:
+        updateFilters(action.data.newFilters);
         break;
     }
 

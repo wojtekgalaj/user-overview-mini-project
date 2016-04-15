@@ -6,12 +6,13 @@ $dropdown-height: 20px;
   .dropdown {
     @extend .form-input;
     @extend .drop-shadow;
+    position: relative;
     margin: 0 10px;
     height: $dropdown-height;
     img {
       position: absolute;
       top: 10px;
-      right: 20px;
+      right: 15px;
     }
   }
 

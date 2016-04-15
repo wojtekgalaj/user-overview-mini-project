@@ -11,4 +11,14 @@
   }
 }
 
+.advanced-filter-tablewrapper {
+  margin: 30px;
+  thead {
+    font-weight: bold;
+  }
+}
 
+
+.filter-controls .inner{
+  display: flex;
+}
