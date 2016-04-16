@@ -4,11 +4,18 @@ var webpack = require('webpack');
 
 module.exports = {
   entry: './app/main.js',
-  devtool: 'source-map',
+  devtool: 'cheap-module-source-map',
   output: {
     path: __dirname,
     filename: 'bundle.js'
   },
+  plugins: [
+    new webpack.DefinePlugin({
+      'process.env': {
+        'NODE_ENV': JSON.stringify('production')
+      }
+    })
+  ],
   module: {
     loaders: [
       {
